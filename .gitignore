@@ -1,0 +1,8 @@
+*.json
+.metadata
+RemoteSystemsTempFiles
+.settings
+*.xml
+Debug
+*.launch
+
