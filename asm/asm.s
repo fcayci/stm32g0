@@ -107,7 +107,7 @@ Default_Handler:
 /* main function */
 .section .text
 main:
-    /* enable GPIOC clock, bit2 on IOPENR */
+	/* enable GPIOC clock, bit2 on IOPENR */
 	ldr r6, =RCC_IOPENR
 	ldr r5, [r6]
 	/* movs expects imm8, so this should be fine */
@@ -115,7 +115,7 @@ main:
 	orrs r5, r5, r4
 	str r5, [r6]
 
-    /* setup PC6 for led 01 for bits 12-13 in MODER */
+	/* setup PC6 for led 01 for bits 12-13 in MODER */
 	ldr r6, =GPIOC_MODER
 	ldr r5, [r6]
 	/* cannot do with movs, so use pc relative */
