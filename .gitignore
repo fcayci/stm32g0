@@ -5,4 +5,6 @@ RemoteSystemsTempFiles
 *.xml
 Debug
 *.launch
+*.log
+libs
 
