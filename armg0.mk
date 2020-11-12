@@ -11,7 +11,7 @@ vpath %.s $(sort $(dir $(SRCS)))
 INCLUDES += -I../include
 
 CFLAGS += $(CDEFS) # project specific definitions
-CFLAGS += -mcpu=cortex-m0 -mthumb # processor setup
+CFLAGS += -mcpu=cortex-m0plus -mthumb # processor setup
 CFLAGS += -O0 # optimization is off
 CFLAGS += -std=gnu11 # use GNU 11 standard
 
@@ -34,7 +34,7 @@ CFLAGS += -fomit-frame-pointer # do not use fp if not needed
 CFLAGS += -ffunction-sections -fdata-sections
 CFLAGS += --specs=nano.specs
 
-LDFLAGS += -mcpu=cortex-m0 -mthumb # processor setup
+LDFLAGS += -mcpu=cortex-m0plus -mthumb # processor setup
 #LDFLAGS += -nostartfiles # dont use standard start files
 #LDFLAGS += -nodefaultlibs # dont use standard libraries
 #LDFLAGS += -nostdlib # dont use startup or default libs
