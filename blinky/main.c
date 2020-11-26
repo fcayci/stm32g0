@@ -13,7 +13,6 @@
 
 #define LEDDELAY    1600000
 
-int main(void);
 void delay(volatile uint32_t);
 
 int main(void) {

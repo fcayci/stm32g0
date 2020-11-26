@@ -64,7 +64,7 @@ build: $(TARGET).elf $(TARGET).bin $(TARGET).lst
 
 $(TARGET).elf: $(OBJS)
 	@echo "Linking..."
-	$(CC) $(OBJS) $(LDFLAGS) -o $(OBJDIR)/$@
+	@$(CC) $(OBJS) $(LDFLAGS) -o $(OBJDIR)/$@
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(OBJDIR)
