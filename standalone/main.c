@@ -46,7 +46,7 @@ pFunc vector_table[] = {
 
 /* initialize data and bss sections */
 void _init_data(void) {
-    // these are symbols from linker script
+    /* these are symbols from linker script */
     extern unsigned long __etext, __data_start__, __data_end__, __bss_start__, __bss_end__;
     unsigned long *src = &__etext;
     unsigned long *dst = &__data_start__;
@@ -67,10 +67,10 @@ void Reset_Handler(void) {
     for(;;);
 }
 
-/* All faults will end up here */
-void Default_Handler(void) {
-    for(;;);
-}
+/* All faults will end up here, since we did not define the rest of the vector
+ * table, the other exceptions/interrupts will most likely crash the program.
+ */
+void Default_Handler(void) { for(;;); }
 
 int main(void) {
 
